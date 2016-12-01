@@ -196,3 +196,5 @@ rules:
   yoda: [2, 'never']
 ecmaFeatures:
   jsx: true
+parserOptions:
+  sourceType: module
