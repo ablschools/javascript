@@ -1,11 +1,15 @@
 # ESLint documentation can be found at http://eslint.org/docs/
 env:
   browser: true
-  node: true
+  commonjs: true
   amd: false
   mocha: true
   jasmine: false
   es6: true
+
+plugins: ['react']
+parser: babel-eslint
+
 rules:
   no-alert: 2
   no-array-constructor: 2
@@ -111,7 +115,7 @@ rules:
   no-useless-concat: 0
   no-void: 2
   no-var: 2
-  no-warning-comments: [0, {terms: ['todo', 'fixme', 'xxx'], location: 'start'}]
+  no-1-comments: [0, {terms: ['todo', 'fixme', 'xxx'], location: 'start'}]
   no-with: 2
   no-magic-numbers: 0
 
@@ -194,6 +198,26 @@ rules:
   wrap-iife: 0
   wrap-regex: 0
   yoda: [2, 'never']
+
+  react/jsx-equals-spacing: [1, 'never']
+  react/jsx-handler-names: [1, {
+    eventHandlerPrefix: 'handle',
+    eventHandlerPropPrefix: 'on'
+  }]
+  react/jsx-no-duplicate-props: [1, { ignoreCase: true }]
+  react/jsx-no-undef: 1
+  react/jsx-pascal-case: [1, {
+    allowAllCaps: true,
+    ignore: [],
+  }]
+  react/jsx-uses-react: 1
+  react/jsx-uses-vars: 1
+  react/no-deprecated: 1
+  react/no-direct-mutation-state: 1
+  react/no-is-mounted: 1
+  react/react-in-jsx-scope: 1
+  react/require-render-return: 1
+
 parserOptions:
   sourceType: module
   ecmaFeatures:
